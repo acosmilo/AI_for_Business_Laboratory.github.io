@@ -73,6 +73,11 @@ conda update anaconda
 ## Jupyter
 - Be sure too already have installed Jupyter Notebooks in the Anaconda Navigator
 <img width="1487" height="877" alt="imagen" src="https://github.com/user-attachments/assets/60ae3652-43b8-4e49-a505-84f02b3f26f0" />
+- Clic on Lunch
+<img width="1587" height="820" alt="imagen" src="https://github.com/user-attachments/assets/5574f2bd-4c76-418d-9ccd-eb824fb6b163" />
+
+- Select the Downloads directory
+<img width="1198" height="193" alt="imagen" src="https://github.com/user-attachments/assets/d1fae4a5-42d0-4154-a4ed-d1c2d1f3b31e" />
 
 ## VSCODE
 ## ORANGE
