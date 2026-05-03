@@ -79,6 +79,20 @@ conda update anaconda
 - Select the Downloads directory
 <img width="1198" height="193" alt="imagen" src="https://github.com/user-attachments/assets/d1fae4a5-42d0-4154-a4ed-d1c2d1f3b31e" />
 
+- Clic on AI Assistant
+<img width="413" height="737" alt="imagen" src="https://github.com/user-attachments/assets/ef5ef475-4561-4a3c-be6b-f89d692ea91c" />
+
+- Mark agree and continue
+<img width="392" height="707" alt="imagen" src="https://github.com/user-attachments/assets/0fa71092-c4ab-4791-8520-cf2087e778b0" />
+- Use the chat
+<img width="398" height="295" alt="imagen" src="https://github.com/user-attachments/assets/4fda0415-898b-445c-9451-14633808bb47" />
+
+<img width="385" height="816" alt="imagen" src="https://github.com/user-attachments/assets/94ce5b68-916d-4df2-995a-8760e85339fe" />
+
+<img width="393" height="132" alt="imagen" src="https://github.com/user-attachments/assets/46dd96a5-dd1c-425f-a011-b7a237e54f68" />
+
+<img width="988" height="552" alt="imagen" src="https://github.com/user-attachments/assets/a8e4f722-4a8e-41a7-91b9-94582382f100" />
+
 ## VSCODE
 ## ORANGE
 ## COLAB
