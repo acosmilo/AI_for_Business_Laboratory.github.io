@@ -93,7 +93,35 @@ conda update anaconda
 
 <img width="988" height="552" alt="imagen" src="https://github.com/user-attachments/assets/a8e4f722-4a8e-41a7-91b9-94582382f100" />
 
+
 ## VSCODE
 ## ORANGE
 ## COLAB
 ## CLAUDE CODE
+- Clic on this link
+https://claude.ai/login
+- Sign up with your e-mail
+<img width="1740" height="995" alt="imagen" src="https://github.com/user-attachments/assets/10bbd167-6549-46c8-b8cb-a6c8e4617866" />
+
+- Use the verification Code of mail
+<img width="1742" height="1016" alt="imagen" src="https://github.com/user-attachments/assets/a2d15e3d-257b-4cba-b407-429f740636c0" />
+
+- Verification mail
+<img width="862" height="737" alt="imagen" src="https://github.com/user-attachments/assets/59a611cc-e4e0-41af-aaa0-bc7ab51910ca" />
+
+<img width="842" height="767" alt="imagen" src="https://github.com/user-attachments/assets/270aefcb-e07c-4170-a280-a178896d1843" />
+
+<img width="725" height="438" alt="imagen" src="https://github.com/user-attachments/assets/f4b9023d-6bb6-407b-90cb-257bc3a19dfb" />
+
+<img width="682" height="345" alt="imagen" src="https://github.com/user-attachments/assets/35c95a6e-23ee-4115-899b-d7ac124ad9be" />
+
+<img width="1480" height="961" alt="imagen" src="https://github.com/user-attachments/assets/5a4cf693-3e4c-4d90-b7cc-07a7f7e59a14" />
+
+- Descarga la app de escritorio
+<img width="1306" height="806" alt="imagen" src="https://github.com/user-attachments/assets/2f8c0210-950f-4db5-987b-f062c7d73aca" />
+- Sigue estos pasos
+<img width="1330" height="646" alt="imagen" src="https://github.com/user-attachments/assets/c7687e90-c4dd-4c42-b522-3ebd73f91188" />
+
+- 
+- 
+- 
