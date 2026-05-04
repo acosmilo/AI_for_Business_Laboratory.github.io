@@ -121,7 +121,36 @@ https://claude.ai/login
 <img width="1306" height="806" alt="imagen" src="https://github.com/user-attachments/assets/2f8c0210-950f-4db5-987b-f062c7d73aca" />
 - Sigue estos pasos
 <img width="1330" height="646" alt="imagen" src="https://github.com/user-attachments/assets/c7687e90-c4dd-4c42-b522-3ebd73f91188" />
+- Dar permisos de administrador
+<img width="508" height="453" alt="imagen" src="https://github.com/user-attachments/assets/ba8581e6-e73c-4f81-83f0-3154df1280ad" />
 
-- 
-- 
-- 
+- Comenzar
+<img width="751" height="751" alt="imagen" src="https://github.com/user-attachments/assets/19258e67-c3c1-4524-8e88-6439ee1adf73" />
+
+
+<img width="737" height="745" alt="imagen" src="https://github.com/user-attachments/assets/3662fb66-9317-4f88-9476-a38e89d93441" />
+
+<img width="817" height="660" alt="imagen" src="https://github.com/user-attachments/assets/82cac58c-74f9-4e77-96f4-0f9ee0b61981" />
+
+<img width="483" height="197" alt="imagen" src="https://github.com/user-attachments/assets/9d56e85d-3e5e-4264-82b3-25615206be4e" />
+
+<img width="812" height="725" alt="imagen" src="https://github.com/user-attachments/assets/2e7ad3cb-f8e3-4c6d-970f-9dc262d87238" />
+
+imagen del plan
+
+<img width="823" height="677" alt="imagen" src="https://github.com/user-attachments/assets/ab2eadf5-8fa7-4a0d-88c2-c7e9c93d9b3d" />
+
+<img width="802" height="292" alt="imagen" src="https://github.com/user-attachments/assets/e9ac4d90-6e00-45d8-a665-44cac2211b3c" />
+
+<img width="816" height="558" alt="imagen" src="https://github.com/user-attachments/assets/cb4d4e7e-ef7b-4595-88bf-a620673c27d9" />
+
+
+- Instalar Claude Code
+<img width="748" height="585" alt="imagen" src="https://github.com/user-attachments/assets/b365d391-8109-4c48-b3dd-c7d2b73aa5b8" />
+
+<img width="790" height="687" alt="imagen" src="https://github.com/user-attachments/assets/5b68f97f-e6e5-4a52-b3b8-8b1b5fa7eb0d" />
+Mi propio Tema
+
+<img width="657" height="536" alt="imagen" src="https://github.com/user-attachments/assets/e6a929b8-d9c5-49dc-b41f-2ef7b946fa13" />
+
+
