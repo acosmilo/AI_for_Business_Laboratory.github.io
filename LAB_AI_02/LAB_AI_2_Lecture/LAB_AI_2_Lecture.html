@@ -19,11 +19,9 @@
 <a class="nav__link" href="#task-4">04 Descriptive Statistics</a>
 <a class="nav__link" href="#task-5">05 Likelihood and Probability Benchmarks</a>
 <a class="nav__link" href="#task-6">06 Groupby Benchmarks</a>
-<a class="nav__link" href="#task-7">07 Required Visualizations</a>
-<a class="nav__link" href="#task-8">08 Pie Charts and Pareto Chart</a>
-<a class="nav__link" href="#task-9">09 Outliers and Confidence Intervals</a>
-<a class="nav__link" href="#task-10">10 Correlation and Normality</a>
-<a class="nav__link" href="#task-11">11 Evolution Heatmap and Cross-tabs</a>
+<a class="nav__link" href="#task-7">07 Outliers and Confidence Intervals</a>
+<a class="nav__link" href="#task-8">08 Correlation and Normality</a>
+<a class="nav__link" href="#task-9">09 Evolution Heatmap and Cross-tabs</a>
         <button class="button button--print" type="button" data-print>Print / PDF</button>
       </div>
     </nav>
@@ -401,134 +399,10 @@ experience_benchmark</code></pre>
     </article>
     
 
+
     <article class="workshop-card" id="task-7">
       <div class="workshop-card__header">
         <span class="workshop-card__number">07</span>
-        <h3 class="workshop-card__title">Required Visualizations</h3>
-      </div>
-      <p class="workshop-card__objective"><strong>Objective:</strong> Create the core EDA plots, but interpret them manually after execution.</p>
-      <section class="workshop-card__section">
-        <h4 class="workshop-card__subtitle">Activities</h4>
-        <ul class="list"><li class="list__item">Build histograms, KDE plots, boxplots, violin plots, countplots, and bar charts.</li><li class="list__item">Write an interpretation after every graph.</li></ul>
-      </section>
-      
-    <details class="code-card workshop-card__code">
-      <summary class="code-card__summary">Open workshop code</summary>
-      <div class="code-card__toolbar">
-        <span class="code-card__label">Python code</span>
-        <button class="button button--copy" type="button" data-copy-target="code-7">Copy</button>
-      </div>
-      <pre class="code-card__pre"><code id="code-7" class="code-card__code-text"># Required visualizations
-main_numeric = [&quot;HP&quot;, &quot;Att&quot;, &quot;Def&quot;, &quot;Spa&quot;, &quot;Spd&quot;, &quot;Spe&quot;, &quot;BST&quot;, &quot;Height&quot;, &quot;Weight&quot;, &quot;BMI&quot;, &quot;Catch Rate&quot;]
-
-# Histograms and KDE plots
-for column in main_numeric:
-    plt.figure(figsize=(8, 4))
-    sns.histplot(data=pokemon, x=column, bins=25, kde=True)
-    plt.title(f&quot;Histogram and KDE: {column}&quot;)
-    plt.show()
-
-# Boxplots for numerical variables
-for column in main_numeric:
-    plt.figure(figsize=(6, 4))
-    sns.boxplot(data=pokemon, y=column)
-    plt.title(f&quot;Boxplot: {column}&quot;)
-    plt.show()
-
-# Violin plots by important categories
-for column in [&quot;BST&quot;, &quot;HP&quot;, &quot;Att&quot;, &quot;Def&quot;, &quot;Spe&quot;]:
-    plt.figure(figsize=(7, 4))
-    sns.violinplot(data=pokemon_clean, x=&quot;legendary_label&quot;, y=column.lower() if column != &quot;BST&quot; else &quot;bst&quot;, inner=&quot;quartile&quot;)
-    plt.title(f&quot;{column} by Legendary Status&quot;)
-    plt.show()
-
-# Countplots and bar charts
-sns.countplot(data=pokemon, y=&quot;Type 1&quot;, order=pokemon[&quot;Type 1&quot;].value_counts().index)
-plt.title(&quot;Primary Type Frequency&quot;)
-plt.show()
-
-sns.countplot(data=pokemon_clean, x=&quot;type_complexity&quot;)
-plt.title(&quot;Single Type vs Dual Type&quot;)
-plt.show()
-
-sns.countplot(data=pokemon_clean, x=&quot;legendary_label&quot;)
-plt.title(&quot;Legendary vs Non-Legendary&quot;)
-plt.show()</code></pre>
-    </details>
-    
-      <section class="workshop-card__section">
-        <h4 class="workshop-card__subtitle">Questions to answer after running the code</h4>
-        <ul class="list"><li class="list__item">What does each chart show?</li><li class="list__item">What pattern is visible?</li><li class="list__item">What question or hypothesis comes from that pattern?</li></ul>
-      </section>
-    </article>
-    
-
-    <article class="workshop-card" id="task-8">
-      <div class="workshop-card__header">
-        <span class="workshop-card__number">08</span>
-        <h3 class="workshop-card__title">Pie Charts and Pareto Chart</h3>
-      </div>
-      <p class="workshop-card__objective"><strong>Objective:</strong> Use pie charts for dichotomous variables and Pareto logic for type frequency.</p>
-      <section class="workshop-card__section">
-        <h4 class="workshop-card__subtitle">Activities</h4>
-        <ul class="list"><li class="list__item">Create pie charts for type complexity, Legendary status, and final evolution.</li><li class="list__item">Create a Pareto chart for Type 1.</li></ul>
-      </section>
-      
-    <details class="code-card workshop-card__code">
-      <summary class="code-card__summary">Open workshop code</summary>
-      <div class="code-card__toolbar">
-        <span class="code-card__label">Python code</span>
-        <button class="button button--copy" type="button" data-copy-target="code-8">Copy</button>
-      </div>
-      <pre class="code-card__pre"><code id="code-8" class="code-card__code-text"># Pie charts and Pareto chart
-pokemon_clean[&quot;type_complexity&quot;].value_counts().plot(
-    kind=&quot;pie&quot;,
-    autopct=&quot;%1.1f%%&quot;,
-    title=&quot;Single Type vs Dual Type&quot;
-)
-plt.ylabel(&quot;&quot;)
-plt.show()
-
-pokemon_clean[&quot;legendary_label&quot;].value_counts().plot(
-    kind=&quot;pie&quot;,
-    autopct=&quot;%1.1f%%&quot;,
-    title=&quot;Legendary vs Non-Legendary&quot;
-)
-plt.ylabel(&quot;&quot;)
-plt.show()
-
-pokemon_clean[&quot;final_evolution_label&quot;].value_counts().plot(
-    kind=&quot;pie&quot;,
-    autopct=&quot;%1.1f%%&quot;,
-    title=&quot;Final Evolution vs Not Final&quot;
-)
-plt.ylabel(&quot;&quot;)
-plt.show()
-
-type_counts = pokemon[&quot;Type 1&quot;].value_counts()
-cumulative_percentage = type_counts.cumsum() / type_counts.sum() * 100
-
-fig, ax1 = plt.subplots(figsize=(10, 5))
-type_counts.plot(kind=&quot;bar&quot;, ax=ax1, color=&quot;steelblue&quot;)
-ax1.set_ylabel(&quot;Count&quot;)
-ax1.set_title(&quot;Pareto Chart of Primary Type&quot;)
-
-ax2 = ax1.twinx()
-cumulative_percentage.plot(ax=ax2, color=&quot;red&quot;, marker=&quot;o&quot;)
-ax2.set_ylabel(&quot;Cumulative percentage&quot;)
-plt.show()</code></pre>
-    </details>
-    
-      <section class="workshop-card__section">
-        <h4 class="workshop-card__subtitle">Questions to answer after running the code</h4>
-        <ul class="list"><li class="list__item">Which dichotomous category dominates?</li><li class="list__item">Which primary types explain most of the dataset?</li><li class="list__item">How does the Pareto chart help prioritize categories?</li></ul>
-      </section>
-    </article>
-    
-
-    <article class="workshop-card" id="task-9">
-      <div class="workshop-card__header">
-        <span class="workshop-card__number">09</span>
         <h3 class="workshop-card__title">Outliers and Confidence Intervals</h3>
       </div>
       <p class="workshop-card__objective"><strong>Objective:</strong> Detect extreme values and estimate confidence intervals for means.</p>
@@ -594,9 +468,9 @@ confidence_intervals</code></pre>
     </article>
     
 
-    <article class="workshop-card" id="task-10">
+    <article class="workshop-card" id="task-8">
       <div class="workshop-card__header">
-        <span class="workshop-card__number">10</span>
+        <span class="workshop-card__number">8</span>
         <h3 class="workshop-card__title">Correlation and Normality</h3>
       </div>
       <p class="workshop-card__objective"><strong>Objective:</strong> Analyze relationships and distribution assumptions.</p>
@@ -650,9 +524,9 @@ for column in [&quot;BST&quot;, &quot;Weight&quot;, &quot;Height&quot;, &quot;Ca
     </article>
     
 
-    <article class="workshop-card" id="task-11">
+    <article class="workshop-card" id="task-9">
       <div class="workshop-card__header">
-        <span class="workshop-card__number">11</span>
+        <span class="workshop-card__number">9</span>
         <h3 class="workshop-card__title">Evolution Heatmap and Cross-tabs</h3>
       </div>
       <p class="workshop-card__objective"><strong>Objective:</strong> Map categorical relationships across generation, type, and evolution status.</p>
