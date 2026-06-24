@@ -1,0 +1,653 @@
+/*
+  Shared LAB_AI styles
+  Merged from home.css and lecture.css.
+  Duplicated selectors were consolidated; page-specific modules were kept once.
+*/
+
+/* 1. Base */
+:root {
+  --color-red: #dc0807;
+  --color-blue: #1850bf;
+  --color-white: #ffffff;
+  --color-dark: #262626;
+  --color-ink: #262626;
+  --color-light: #f4f4f4;
+  --color-soft: #fafafa;
+  --color-muted: #666666;
+  --color-green: #0f7a3a;
+  --color-yellow: #ffe680;
+
+  --border-heavy: 4px solid var(--color-dark);
+  --shadow-heavy: 8px 8px 0 var(--color-dark);
+  --shadow-small: 5px 5px 0 var(--color-dark);
+  --radius-large: 22px;
+
+  --font-main: "Comic Sans MS", "Comic Sans", cursive;
+  --font-size-small: 14px;
+  --font-size-base: 17px;
+  --font-size-large: 24px;
+  --font-size-title: clamp(34px, 5vw, 54px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-size: var(--font-size-base);
+  line-height: 1.55;
+}
+
+a,
+button,
+code,
+pre {
+  font-family: inherit;
+}
+
+code {
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-red);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+/* 2. Layout */
+.page__main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 18px 52px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-white);
+  color: var(--color-ink);
+  border-bottom: var(--border-heavy);
+  padding: 6px 14px;
+}
+
+.nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.nav__links {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+}
+
+.footer {
+  max-width: 1180px;
+  margin: 0 auto 38px;
+}
+
+/* 3. Shared modules */
+.nav__brand {
+  flex: 0 0 auto;
+  color: var(--color-red);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav__link,
+.button {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-dark);
+  border-radius: 999px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--color-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.button--primary,
+.button--copy {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.button--print {
+  background: var(--color-yellow);
+}
+
+.hero__card,
+.poster,
+.note-card,
+.method-card,
+.workshop-card,
+.lab-card,
+.footer {
+  background: var(--color-white);
+  color: var(--color-ink);
+  border: var(--border-heavy);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-heavy);
+  padding: 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 26px;
+  align-items: stretch;
+  min-height: 420px;
+  margin: 34px 0;
+  scroll-margin-top: 110px;
+}
+
+.hero__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__actions,
+.lab-card__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.hero__eyebrow,
+.note-card__eyebrow,
+.method-card__eyebrow,
+.workshop__eyebrow,
+.poster__label {
+  color: var(--color-red);
+  font-size: var(--font-size-small);
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  font-size: var(--font-size-title);
+  margin: 10px 0 16px;
+  letter-spacing: -1px;
+}
+
+.hero__lead {
+  max-width: 820px;
+}
+
+.poster {
+  background: var(--color-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.poster__block {
+  border: 3px solid var(--color-dark);
+  border-radius: 18px;
+  padding: 16px;
+  background: var(--color-white);
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-small);
+}
+
+.poster__label {
+  letter-spacing: 0.7px;
+}
+
+.poster__number {
+  font-size: var(--font-size-title);
+  font-weight: 900;
+  color: var(--color-dark);
+  line-height: 1;
+}
+
+.poster__text {
+  margin-bottom: 0;
+}
+
+.note-card,
+.method-card,
+.workshop-card,
+.lab-card {
+  margin-top: 18px;
+  scroll-margin-top: 110px;
+}
+
+.note-card__title,
+.method-card__title,
+.workshop__title {
+  font-size: clamp(28px, 3vw, 42px);
+  margin: 8px 0 16px;
+}
+
+.list {
+  padding-left: 22px;
+  margin-bottom: 14px;
+}
+
+.list__item {
+  margin: 7px 0;
+}
+
+.footer__text {
+  margin-bottom: 0;
+}
+
+/* 4. Home page modules */
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.lab-card {
+  box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+}
+
+.lab-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.lab-card__status,
+.lab-card__code {
+  border: 2px solid var(--color-dark);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-size: var(--font-size-small);
+  font-weight: 900;
+}
+
+
+.lab-card--soon {
+  background: var(--color-soft);
+}
+
+.lab-card__title {
+  font-size: var(--font-size-large);
+  margin-bottom: 12px;
+}
+
+.lab-card__text {
+  color: var(--color-ink);
+}
+
+.resource-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.resource-item {
+  display: grid;
+  gap: 6px;
+  border: 3px solid var(--color-dark);
+  border-radius: 18px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: var(--shadow-small);
+  padding: 16px;
+  text-decoration: none;
+}
+
+.resource-item__title {
+  color: var(--color-red);
+  font-weight: 900;
+}
+
+.resource-item__path {
+  color: var(--color-muted);
+  font-size: var(--font-size-small);
+  overflow-wrap: anywhere;
+}
+
+/* 5. Lecture page modules */
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.pill-list__item {
+  border: 2px solid var(--color-dark);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: var(--color-light);
+  font-weight: 900;
+}
+
+.workshop-card__header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.workshop-card__number {
+  color: var(--color-blue);
+  font-size: var(--font-size-large);
+  font-weight: 900;
+}
+
+.workshop-card__title {
+  font-size: var(--font-size-large);
+  margin-bottom: 10px;
+}
+
+.workshop-card__subtitle {
+  margin: 18px 0 8px;
+}
+
+.code-card {
+  border: 3px solid var(--color-dark);
+  border-radius: 16px;
+  background: var(--color-white);
+  padding: 12px 14px;
+  margin-top: 14px;
+  box-shadow: var(--shadow-small);
+}
+
+.code-card__summary {
+  cursor: pointer;
+  font-weight: 900;
+  color: var(--color-red);
+}
+
+.code-card[open] .code-card__summary {
+  margin-bottom: 12px;
+}
+
+.code-card__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-weight: 900;
+}
+
+.code-card__pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  border: 3px solid var(--color-dark);
+  border-radius: 16px;
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 6. States */
+.nav__link:hover,
+.button:hover,
+.resource-item:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--color-dark);
+}
+
+.button.is-copied {
+  background: var(--color-yellow);
+  color: var(--color-ink);
+}
+
+/* 7. Responsive */
+@media (max-width: 900px) {
+  .hero,
+  .lab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .hero__card,
+  .poster,
+  .note-card,
+  .method-card,
+  .workshop-card,
+  .lab-card,
+  .footer {
+    padding: 18px;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .topbar,
+  .button--copy {
+    display: none !important;
+  }
+
+  .hero,
+  .note-card,
+  .method-card,
+  .workshop-card,
+  .footer {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
+
+.graph-box {
+  border: 3px solid var(--color-dark);
+  border-radius: 18px;
+  background: var(--color-light);
+  padding: 16px;
+  margin-top: 16px;
+  box-shadow: var(--shadow-small);
+}
+
+.graph-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.figure-card {
+  position: relative;
+  margin: 0;
+  border: 3px solid var(--color-dark);
+  border-radius: 16px;
+  background: var(--color-white);
+  overflow: hidden;
+  box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+}
+
+.figure-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--color-white);
+  cursor: zoom-in;
+}
+
+.figure-card figcaption {
+  padding: 12px;
+  font-size: var(--font-size-small);
+  line-height: 1.45;
+  color: var(--color-ink);
+}
+
+.figure-card figcaption strong {
+  color: var(--color-red);
+}
+
+.image-action-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  border: 3px solid var(--color-dark);
+  border-radius: 999px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 8px 12px;
+  font-family: var(--font-main);
+  font-size: var(--font-size-small);
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--color-dark);
+}
+
+.image-action-btn:hover,
+.zoom-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--color-dark);
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  background: rgba(0, 0, 0, 0.82);
+  padding: 22px;
+}
+
+.image-modal.open {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 14px;
+}
+
+.image-modal-toolbar {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--color-white);
+  border: var(--border-heavy);
+  border-radius: 18px;
+  box-shadow: var(--shadow-small);
+  padding: 12px;
+}
+
+.image-modal-title {
+  font-weight: 900;
+  color: var(--color-red);
+  font-size: var(--font-size-small);
+}
+
+.image-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.zoom-btn {
+  border: 3px solid var(--color-dark);
+  border-radius: 999px;
+  background: var(--color-white);
+  color: var(--color-dark);
+  padding: 8px 12px;
+  font-family: var(--font-main);
+  font-size: var(--font-size-small);
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--color-dark);
+}
+
+.zoom-btn.primary {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.zoom-btn.close {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+.image-modal-stage {
+  max-width: 1180px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: auto;
+  background: var(--color-soft);
+  border: var(--border-heavy);
+  border-radius: 18px;
+  box-shadow: var(--shadow-small);
+  padding: 18px;
+  text-align: center;
+}
+
+.image-modal-stage img {
+  max-width: none;
+  height: auto;
+  transition: width 0.12s ease;
+  border: 3px solid var(--color-dark);
+  border-radius: 12px;
+  background: var(--color-white);
+}
+
+@media (max-width: 960px) {
+  .graph-grid {
+    grid-template-columns: 1fr;
+  }
+}

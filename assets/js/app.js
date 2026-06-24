@@ -58,3 +58,118 @@ const WorkshopController = {
 document.addEventListener("DOMContentLoaded", () => {
   WorkshopController.init();
 });
+
+
+
+const imageModal = document.getElementById('imageModal');
+const expandedImage = document.getElementById('expandedImage');
+const imageModalTitle = document.getElementById('imageModalTitle');
+const imageModalStage = document.getElementById('imageModalStage');
+
+const zoomInBtn = document.getElementById('zoomInBtn');
+const zoomOutBtn = document.getElementById('zoomOutBtn');
+const zoomResetBtn = document.getElementById('zoomResetBtn');
+const closeImageModal = document.getElementById('closeImageModal');
+
+let currentZoom = 1;
+
+function applyZoom() {
+  if (!expandedImage.naturalWidth) return;
+
+  expandedImage.style.width = `${Math.round(
+    expandedImage.naturalWidth * currentZoom
+  )}px`;
+}
+
+function openImageModal(img) {
+  currentZoom = 1;
+
+  expandedImage.onload = applyZoom;
+  expandedImage.src = img.src;
+  expandedImage.alt = img.alt || 'Expanded screenshot';
+
+  const caption = img
+    .closest('figure')
+    ?.querySelector('figcaption')
+    ?.innerText || 'Expanded image';
+
+  imageModalTitle.textContent = caption;
+
+  imageModal.classList.add('open');
+  imageModal.setAttribute('aria-hidden', 'false');
+
+  imageModalStage.scrollTop = 0;
+  imageModalStage.scrollLeft = 0;
+
+  applyZoom();
+}
+
+function closeModal() {
+  imageModal.classList.remove('open');
+  imageModal.setAttribute('aria-hidden', 'true');
+
+  expandedImage.removeAttribute('style');
+  expandedImage.onload = null;
+  expandedImage.src = '';
+}
+
+document.querySelectorAll('.figure-card img').forEach((img, index) => {
+  const button = document.createElement('button');
+
+  button.type = 'button';
+  button.className = 'image-action-btn';
+  button.textContent = 'Expand';
+  button.setAttribute('aria-label', `Expand screenshot ${index + 1}`);
+
+  button.addEventListener('click', () => openImageModal(img));
+
+  img.closest('.figure-card').appendChild(button);
+  img.addEventListener('click', () => openImageModal(img));
+});
+
+zoomInBtn?.addEventListener('click', () => {
+  currentZoom = Math.min(3, currentZoom + 0.25);
+  applyZoom();
+});
+
+zoomOutBtn?.addEventListener('click', () => {
+  currentZoom = Math.max(0.5, currentZoom - 0.25);
+  applyZoom();
+});
+
+zoomResetBtn?.addEventListener('click', () => {
+  currentZoom = 1;
+  applyZoom();
+
+  imageModalStage.scrollTop = 0;
+  imageModalStage.scrollLeft = 0;
+});
+
+closeImageModal?.addEventListener('click', closeModal);
+
+imageModal?.addEventListener('click', event => {
+  if (event.target === imageModal) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', event => {
+  if (!imageModal.classList.contains('open')) return;
+
+  if (event.key === 'Escape') closeModal();
+
+  if (event.key === '+') {
+    currentZoom = Math.min(3, currentZoom + 0.25);
+    applyZoom();
+  }
+
+  if (event.key === '-') {
+    currentZoom = Math.max(0.5, currentZoom - 0.25);
+    applyZoom();
+  }
+
+  if (event.key === '0') {
+    currentZoom = 1;
+    applyZoom();
+  }
+});
