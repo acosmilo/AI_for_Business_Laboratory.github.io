@@ -403,3 +403,42 @@ p {
     break-inside: avoid;
   }
 }
+
+/* Compact header / nav */
+.topbar {
+  padding: 6px 14px;
+}
+
+.nav {
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__brand {
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav__links {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+}
+
+.nav__link,
+.button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-width: 2px;
+  box-shadow: 2px 2px 0 var(--color-dark);
+}
